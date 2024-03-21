@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The front-page template file.
  *
@@ -8,6 +9,21 @@
  * @package HML Classic
  */
 get_header();
-?> 
-<h1>HML Construction Landing Page</h1>
+?>
+
+
+<div>
+    <?php while (have_posts()) : ?>
+        <div class="container">
+            <?php the_post();
+            ?>
+
+            <div class="actual-content">
+                <?php the_content(); ?>
+            </div>
+        </div>
+    <?php endwhile; ?>
+</div>
+
 <?php get_footer(); ?>
+
