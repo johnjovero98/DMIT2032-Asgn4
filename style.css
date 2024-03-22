@@ -8,7 +8,8 @@ Requires PHP: 8.0
 */
 
 
-/********** RESET **********/
+
+/* ********** RESET **********  */
 /* Box sizing rules */
 *,
 *::before,
@@ -50,8 +51,8 @@ body {
 }
 
 /* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+a {
+  text-decoration: none;
 }
 
 /* Make images easier to work with */
@@ -86,7 +87,73 @@ select {
 }
 
 
-/********** CUSTOM STYLES **********/
+/* ********** CUSTOM STYLES **********  */
+
+/* breakpoints 
+--medium: 650px;
+--large: 960px
+*/
+
+:root {
+  --primary-color: #29942c;
+  --secondary-color:#000000;
+  --white: #FFFFFF;
+  --light-background: #EBFAEC;
+  --black-background:#4D5053;
+  --brand-light:#7CBA3B;
+  --dark-bg: #333436;
+}
+
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100%;
+}
+
+
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body a {
+  color: var(--primary-color);
+}
+
+body a:hover {
+  color: var(--brand-light);
+  text-decoration: underline;
+}
+
+
+nav a {
+  color: var(--secondary-color);
+}
+
+nav a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+
+.wp-element-button {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  border: var(--primary-color) 2px solid;
+}
+
+.wp-element-button:hover {
+  background-color: var(--white);
+  color: var(--secondary-color);
+  text-decoration: none;
+  
+
+}
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -95,6 +162,181 @@ select {
 img {
   max-width: 100%;
 }
+
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+
+header div .logo {
+  width: 170px;
+}
+
+
+
+header #menu-main-menu {
+  list-style: none;
+  margin: unset;
+  padding: 1rem;
+}
+
+header #menu-main-menu > li {
+  margin: .5rem 0;
+}
+
+header #menu-main-menu > li > a {
+  display: inline-block ;
+  padding: .5rem;
+}
+
+header #menu-main-menu > li > a:hover {
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+
+header div nav{
+  display: none;
+}
+
+.show-nav {
+  display: block;
+  background-color: #29942c;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.show-nav a {
+  color: var(--white);
+}
+
+
+header .menu-bttn {
+  background-color: #29942c;
+  border: unset;
+  border-radius: 10px;
+  padding: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 59px;
+  height: 59px;
+
+}
+
+
+
+header .menu-bttn svg {
+  fill: var(--white);
+}
+
+
+header div nav .sub-menu {
+  display: block;
+  list-style: none;
+}
+
+header div nav .sub-menu a:hover {
+  color: var(--light-background);
+  text-decoration: underline;
+}
+
+header .contact-us {
+  padding: 0 1rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+header .contact-us .wp-block-button {
+  display: block;
+  width: 100%;
+}
+
+header .wp-block-button__link {
+  text-wrap: nowrap;
+  background-color: var(--light-background);
+  color: black;  
+  display: block;
+}
+
+@media screen and (min-width: 650px) {
+
+  header div nav, .show-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    position: unset;
+    background-color: unset;
+  }
+
+  .show-nav a {
+    color: var(--secondary-color);
+  }
+
+  header .wp-block-button__link {
+    color: var(--white);
+  }
+
+  header div nav .sub-menu {
+    display: none;
+  }
+
+
+  header div nav #menu-main-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  header div nav #menu-main-menu li {
+    position: relative;
+  }
+
+  header div nav #menu-main-menu li:hover .sub-menu {
+    display: block;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    padding: 1rem;
+    width: max-content;
+    z-index: 1;
+  }
+
+  header div nav #menu-main-menu li:hover .sub-menu li:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+
+  header div nav #menu-main-menu li:hover .sub-menu a {
+    color: var(--white);
+  }
+
+  header .menu-bttn {
+    display: none;
+  }
+
+  header .contact-us {
+    padding: unset;
+  }
+
+  header .wp-block-button__link {
+    text-wrap: nowrap;
+    background-color: var(--primary-color);
+    
+  }
+
+}
+
+
+
+
+
 
 .wp-block-query ul {
   display: flex;
@@ -119,7 +361,6 @@ img {
     flex: 1 1 17%;
   }
 }
-
 
 .widgets {
   display: flex;
@@ -171,5 +412,5 @@ img {
   .post-banner div {
     width: 50%;
   }
-  
+
 }

@@ -1,5 +1,18 @@
 <?php 
 function hml_classic_jj_enqueue_styles() {
+    wp_enqueue_style(       
+        'heading-font',  
+        'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap',  
+        array(),        
+        false,
+    );
+    wp_enqueue_style(       
+        'body-font',  
+        'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap',  
+        array(),        
+        false,
+    );
+
     wp_enqueue_style(
         'hml-custom-style',
         'style.css',
@@ -7,6 +20,7 @@ function hml_classic_jj_enqueue_styles() {
         false,
         'all'
     );
+    
     wp_enqueue_style(
         'main-stylesheet',
         get_stylesheet_uri(),
@@ -17,6 +31,17 @@ function hml_classic_jj_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'hml_classic_jj_enqueue_styles');
 
+function hml_classic_jj_enqueue_scripts() {
+    wp_enqueue_script(
+        'hml-custom-script',
+        get_template_directory_uri() . '/assets/js/index.js',
+        array(),
+        '1.0',
+        true
+    );         
+}
+
+add_action('wp_enqueue_scripts', 'hml_classic_jj_enqueue_scripts');
 
 function hml_classic_jj_theme_setup() {
     add_theme_support( 'custom-logo');
