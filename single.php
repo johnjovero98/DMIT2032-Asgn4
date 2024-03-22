@@ -1,6 +1,7 @@
-<?php get_header(); ?>
-
 <p>this web page is using single.php</p>
+
+
+<?php get_header(); ?>
 
 <div class="post-banner">
     <div>

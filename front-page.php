@@ -1,15 +1,8 @@
-<?php
+<p>this page uses front-page.php</p>
 
-/**
- * The front-page template file.
- *
- * If the user has selected a static page for their homepage, this is what will
- * appear.
- *
- * @package HML Classic
- */
-get_header();
-?>
+
+<?php get_header(); ?>
+
 
 
 <div>

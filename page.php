@@ -1,20 +1,15 @@
 <p>this web page is using page.php</p>
 
-<?php
+<?php get_header(); ?>
 
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- */
-get_header();
-?>
+<div class="post-banner">
+    <div>
+        <h1><?php the_title(); ?></h1>
+    </div>
+    <?php $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large'); ?>
+    <img src="<?= $featured_image[0]; ?>" alt='' />
+</div>
+
 <?php while (have_posts()) : ?>
     <?php the_post(); ?>
     <div class="container">

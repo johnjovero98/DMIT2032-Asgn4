@@ -209,6 +209,7 @@ header div nav{
   top: 100%;
   left: 0;
   width: 100%;
+  z-index: 2;
 }
 
 .show-nav a {
@@ -235,11 +236,24 @@ header .menu-bttn svg {
   fill: var(--white);
 }
 
+header div nav .sub-menu{
+  display: none;
+}
 
-header div nav .sub-menu {
+
+header #menu-main-menu > li:hover .sub-menu {
   display: block;
   list-style: none;
+  background-color: var(--light-background);
+  padding-left: .5rem;
 }
+
+header div nav .sub-menu li{
+  background-color: var(--brand-light);
+  padding: 1rem 1rem 1rem .5rem;
+}
+
+
 
 header div nav .sub-menu a:hover {
   color: var(--light-background);
@@ -307,6 +321,11 @@ header .wp-block-button__link {
     padding: 1rem;
     width: max-content;
     z-index: 1;
+  }
+
+  header div nav #menu-main-menu li:hover .sub-menu li {
+    background-color: unset;
+    padding:unset
   }
 
   header div nav #menu-main-menu li:hover .sub-menu li:not(:last-of-type) {

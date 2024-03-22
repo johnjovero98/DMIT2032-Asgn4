@@ -47,6 +47,8 @@ function hml_classic_jj_theme_setup() {
     add_theme_support( 'custom-logo');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
+    add_theme_support('appearance-tools');
+    add_theme_support('border');
     add_theme_support('editor-color-palette', array(
         array(
             'name'  => esc_attr__( 'Primary Colour', 'themeLangDomain' ),

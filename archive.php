@@ -1,0 +1,1 @@
+<p>this page uses archive.php</p>

@@ -1,3 +1,5 @@
+<p>this page uses index.php</p>
+
 <?php
 
 /**
