@@ -2,7 +2,6 @@ const menuButton = document.querySelector('.menu-bttn');
 let menuItem = document.querySelectorAll('.menu-item');
 
 // add click event for menu items in mobile view
-console.log(menuItem)
 menuButton.addEventListener("click", function(){
     const menuNav = document.querySelector('nav')
     menuNav.classList.toggle('show-nav')
