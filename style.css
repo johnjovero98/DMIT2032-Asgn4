@@ -134,6 +134,13 @@ body a:hover {
   text-decoration: underline;
 }
 
+body h2{
+  font-size: 3.052rem;
+}
+
+body h3 {
+  font-size: 2.441rem;
+}
 
 nav a {
   color: var(--secondary-color);
@@ -367,6 +374,8 @@ header .wp-block-button__link {
 
 .wp-block-query ul li {
   flex: 1 1 auto;
+  background-color: var(--light-background);
+  border-radius: 30px;
 }
 
 
@@ -385,13 +394,41 @@ header .wp-block-button__link {
 
 .widgets {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+  padding: 2rem;
+}
+
+
+.widgets h2{
+  font-size: 2.441rem;
 }
 
 .widgets div {
-  flex: 1 1 auto;
+  flex: 1 1 100%;
 }
 
+
+.widgets div p {
+  margin: 1rem 0;
+}
+
+@media screen and (min-width: 960px) {
+
+  .widgets {
+    gap: 5rem;
+  }
+
+  .widgets > div:first-of-type {
+    flex: 1 1 20%;
+  }
+
+  .widgets > div:last-of-type{
+    flex: 1 1 65%;
+  }
+  
+  
+}
 
 .post-banner {
   margin-bottom: 2rem;
@@ -435,9 +472,6 @@ header .wp-block-button__link {
   }
 
 }
-
-
-
 
 
 .hero-banner {
@@ -484,5 +518,30 @@ header .wp-block-button__link {
     border-radius: 0 0 0 200px;
   }
 
-  
+}
+
+.call-to-action2 {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  text-align: center;
+  border-radius: 70px;
+
+}
+
+.call-to-action2 > div {
+  padding: 5rem 2rem;
+}
+
+.call-to-action2 h2 {
+  font-size: clamp(2.441rem, 1.983rem + 2.29vw, 3.815rem);
+  margin: unset;
+}
+
+.call-to-action2 p {
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+
+.post-content {
+  padding: 2rem;
 }

@@ -49,6 +49,8 @@ function hml_classic_jj_theme_setup() {
     add_theme_support('post-thumbnails');
     add_theme_support('appearance-tools');
     add_theme_support('border');
+    add_theme_support('editor-styles');
+    add_theme_support('wp-block-styles');
     add_theme_support('editor-color-palette', array(
         array(
             'name'  => esc_attr__( 'Primary Colour', 'themeLangDomain' ),
@@ -85,6 +87,45 @@ function hml_classic_jj_theme_setup() {
             'slug'  => 'dark-background',
             'color' => '#333436')
         ));
+    
+    add_theme_support('editor-font-sizes', array(
+        array(
+            'name' => esc_attr__( 'H1', 'themeLangDomain' ),
+            'size' => '3.815rem',
+            'slug' => 'h1'
+        ),
+        array(
+            'name' => esc_attr__( 'H2', 'themeLangDomain' ),
+            'size' => '3.052rem',
+            'slug' => 'h2'
+        ),
+        array(
+            'name' => esc_attr__( 'H3', 'themeLangDomain' ),
+            'size' => '2.441rem',
+            'slug' => 'h3'
+        ),
+        array(
+            'name' => esc_attr__( 'H4', 'themeLangDomain' ),
+            'size' => '1.953rem',
+            'slug' => 'h4'
+        ),
+        array(
+            'name' => esc_attr__( 'H5', 'themeLangDomain' ),
+            'size' => '1.563rem',
+            'slug' => 'h5'
+        ),
+        array(
+            'name' => esc_attr__( 'H6', 'themeLangDomain' ),
+            'size' => '1.25rem',
+            'slug' => 'h6'
+        ),
+        array(
+            'name' => esc_attr__( 'paragraph', 'themeLangDomain' ),
+            'size' => '1rem',
+            'slug' => 'paragraph'
+        ),
+
+    ));
 
     register_nav_menus(array(
         'header' => 'Display this menu in the header',
