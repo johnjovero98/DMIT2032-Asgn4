@@ -155,3 +155,9 @@ function hml_classic_jj_register_sidebars() {
 }
 
 add_action('widgets_init','hml_classic_jj_register_sidebars');
+
+
+function hml_classic_jj_custom_excerpt_length() {
+    return 15;
+}
+add_filter( 'excerpt_length', 'hml_classic_jj_custom_excerpt_length' );

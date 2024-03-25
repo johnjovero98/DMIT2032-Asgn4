@@ -1,7 +1,6 @@
-<p>this page uses index.php</p>
+
 
 <?php
-
 /**
  * The main template file
  *
@@ -15,12 +14,22 @@
  */
 get_header();
 ?>
-<?php while (have_posts()) : ?>
-    <?php the_post(); ?>
-    <div class="container">
-        <h2><?php the_title(); ?></h2>
-        <?php the_content(); ?>
 
+<p>this page uses index.php</p>
+
+
+<div class="call-to-action2 container" >
+    <div>
+        <h2>First Impressions Matter</h2>
+        <p>Contact Us & Get a Free Consultation</p>
+        <!-- wp:buttons -->
+        <div class=" contact-us wp-block-buttons"><!-- wp:button -->
+            <div class="wp-block-button">
+                <a class="wp-block-button__link wp-element-button" href="https://jjovero1.dmitstudent.ca/dmit2032/classic-site/contact-us/">Get A Free Quote</a>
+            </div>
+            <!-- /wp:button -->
+        </div>
+        <!-- /wp:buttons -->
     </div>
-<?php endwhile; ?>
+</div>
 <?php get_footer(); ?>

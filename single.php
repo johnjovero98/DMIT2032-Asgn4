@@ -1,7 +1,5 @@
-<p>this web page is using single.php</p>
-
-
 <?php get_header(); ?>
+
 
 <div class="post-banner">
     <div>
@@ -14,11 +12,29 @@
 <?php while (have_posts()) : ?>
     <?php the_post(); ?>
     <div class="post-content container">
-        <?php the_content(); ?>
+        <div class="contents"><?php the_content(); ?></div>
+        <div class="category">
+            <h3>Category</h3>
+            <?php
+            $post_categories = get_the_category();
+            $separator = ' | ';
+            $output = '';
+
+            if (!empty($post_categories)) {
+                foreach ($post_categories as $category) {
+                    $output .= '<a href="' . esc_attr(get_category_link($category->term_id)) . '">' . $category->name . '</a>' . $separator;
+                }
+                $output = rtrim($output, $separator);
+                echo $output;
+            } else {
+                echo '<p>No categeory added yet.</p>';
+            }
+            ?>
+        </div>
     </div>
 <?php endwhile; ?>
 
-<div class="call-to-action2 container" >
+<div class="call-to-action2 container">
     <div>
         <h2>First Impressions Matter</h2>
         <p>Contact Us & Get a Free Consultation</p>

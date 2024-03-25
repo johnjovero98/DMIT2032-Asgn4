@@ -1,6 +1,3 @@
-<p>this page uses front-page.php</p>
-
-
 <?php get_header(); ?>
 
 <div class="hero-banner">

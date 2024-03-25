@@ -1,6 +1,6 @@
-<p>this web page is using page.php</p>
 
 <?php get_header(); ?>
+
 
 <div class="post-banner">
     <div>

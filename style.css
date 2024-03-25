@@ -123,6 +123,12 @@ h6 {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
   font-style: normal;
+  margin: unset;
+
+}
+
+p {
+  margin: unset;
 }
 
 body a {
@@ -384,31 +390,17 @@ header .menu-item > a:hover svg {
 
 
 .wp-block-query ul {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(1250px/6), 1fr));
   gap: 1rem;
 }
 
 .wp-block-query ul li {
-  flex: 1 1 auto;
   background-color: var(--light-background);
   border-radius: 30px;
   margin: unset;
 }
 
-
-@media screen and (min-width: 650px) {
-  .wp-block-query ul li {
-    flex: 1 1 30%;
-  }
-}
-
-
-@media screen and (min-width: 960px) {
-  .wp-block-query ul li {
-    flex: 1 1 17%;
-  }
-}
 
 .widgets {
   display: flex;
@@ -527,7 +519,7 @@ header .menu-item > a:hover svg {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #00000091;
+  background-color: #00000054;
   border-radius: 0 0 0 100px;
 }
 
@@ -560,6 +552,69 @@ header .menu-item > a:hover svg {
   margin: 1rem 0;
 }
 
+
+/* ********** single.php STYLES **********  */
+
 .post-content {
   padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
 }
+
+.post-content .contents {
+flex: 1 1 60%;
+  
+}
+
+
+.post-content .category {
+  border-radius: 20px;
+  padding: 2rem;
+  background-color: var(--light-background);
+  flex: 0 0 30%;
+}
+
+.post-content .category h3 {
+  font-size: 1.953rem;
+}
+
+.post-content .category a {
+  font-size: 1.25rem;
+}
+
+
+.archive-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.archive-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+
+}
+
+.archive-posts div {
+  background-color: var(--light-background);
+  padding: 2rem;
+  border-radius: 30px;
+}
+
+
+.archive-posts img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.archive-posts h3 {
+  font-size: 1.563rem;
+}
+
+
+
