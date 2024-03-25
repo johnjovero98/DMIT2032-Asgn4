@@ -539,7 +539,7 @@ header .menu-item > a:hover svg {
 }
 
 .call-to-action2 > div {
-  padding: 5rem 2rem;
+  padding: 10rem 2rem;
 }
 
 .call-to-action2 h2 {
@@ -617,4 +617,25 @@ flex: 1 1 60%;
 }
 
 
+.error-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 5rem;
+}
 
+.error-message p {
+  font-size: 1.953rem;
+}
+
+.error-message img {
+  width: 25%;
+  margin-bottom: 2rem;
+}
+
+
+.home-widgets {
+  margin: 2rem 0;
+  padding: 1rem;
+}

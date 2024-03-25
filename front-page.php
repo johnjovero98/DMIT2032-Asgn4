@@ -19,8 +19,7 @@
     <div class="overlay"></div>
 </div>
 
-
-
+<!-- post grid -->
 <div>
     <?php while (have_posts()) : ?>
         <div class="container">
@@ -32,6 +31,11 @@
             </div>
         </div>
     <?php endwhile; ?>
+</div>
+
+<!-- homepage widget -->
+<div class="container">
+    <?php dynamic_sidebar('home-page-widgets'); ?>
 </div>
 
 

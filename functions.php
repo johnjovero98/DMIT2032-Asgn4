@@ -152,6 +152,14 @@ function hml_classic_jj_register_sidebars() {
         'after_widget' => '</div>'
 
     ));
+
+    register_sidebar( array(
+        'name' => 'Home Page Widgets',
+        'id' => 'home-page-widgets',
+        'description' => 'Widgets for homepage',
+        'before_widget' => '<div class="home-widgets">',
+        'after_widget' => '</div>'
+    ));
 }
 
 add_action('widgets_init','hml_classic_jj_register_sidebars');
