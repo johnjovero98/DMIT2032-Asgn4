@@ -38,8 +38,6 @@
     <?php dynamic_sidebar('home-page-widgets'); ?>
 </div>
 
-
-
 <div class="call-to-action2 container" >
     <div>
         <h2>First Impressions Matter</h2>

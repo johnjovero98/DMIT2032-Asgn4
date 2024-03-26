@@ -140,7 +140,7 @@ body a:hover {
   text-decoration: underline;
 }
 
-body h2{
+body h2 {
   font-size: 3.052rem;
 }
 
@@ -247,8 +247,6 @@ header .menu-bttn {
 
 }
 
-
-
 header .menu-bttn svg {
   fill: var(--white);
 }
@@ -256,7 +254,6 @@ header .menu-bttn svg {
 header div nav .sub-menu {
   display: none;
 }
-
 
 header #menu-main-menu>li:hover .sub-menu {
   display: block;
@@ -269,8 +266,6 @@ header div nav .sub-menu li {
   background-color: var(--brand-light);
   padding: 1rem 1rem 1rem .5rem;
 }
-
-
 
 header div nav .sub-menu a:hover {
   color: var(--light-background);
@@ -295,17 +290,17 @@ header .wp-block-button__link {
   display: block;
 }
 
-header .menu-item > a {
+header .menu-item>a {
   display: flex;
   align-items: center;
-  gap:0.5rem
+  gap: 0.5rem
 }
 
-header .menu-item > a svg {
+header .menu-item>a svg {
   fill: var(--white);
 }
 
-header .menu-item > a:hover svg {
+header .menu-item>a:hover svg {
   fill: var(--primary-color);
 }
 
@@ -352,7 +347,7 @@ header .menu-item > a:hover svg {
     left: 0;
     padding: 1rem;
     width: max-content;
-    z-index: 1;
+    z-index: 3;
   }
 
   header div nav #menu-main-menu li:hover .sub-menu li {
@@ -382,7 +377,7 @@ header .menu-item > a:hover svg {
 
   }
 
-  header .menu-item > a svg {
+  header .menu-item>a svg {
     fill: var(--secondary-color);
   }
 
@@ -410,7 +405,7 @@ header .menu-item > a:hover svg {
 }
 
 
-.widgets h2{
+.widgets h2 {
   font-size: 2.441rem;
 }
 
@@ -429,15 +424,15 @@ header .menu-item > a:hover svg {
     gap: 5rem;
   }
 
-  .widgets > div:first-of-type {
+  .widgets>div:first-of-type {
     flex: 1 1 20%;
   }
 
-  .widgets > div:last-of-type{
+  .widgets>div:last-of-type {
     flex: 1 1 65%;
   }
-  
-  
+
+
 }
 
 .post-banner {
@@ -513,7 +508,7 @@ header .menu-item > a:hover svg {
 .hero-banner .call-to-action p {
   max-width: 53ch;
   margin: 1rem 0;
-} 
+}
 
 .hero-banner .overlay {
   position: absolute;
@@ -524,7 +519,9 @@ header .menu-item > a:hover svg {
 }
 
 @media screen and (min-width: 650px) {
-  .hero-banner, .hero-banner .overlay  {
+
+  .hero-banner,
+  .hero-banner .overlay {
     border-radius: 0 0 0 200px;
   }
 
@@ -538,7 +535,7 @@ header .menu-item > a:hover svg {
 
 }
 
-.call-to-action2 > div {
+.call-to-action2>div {
   padding: 10rem 2rem;
 }
 
@@ -564,8 +561,8 @@ header .menu-item > a:hover svg {
 }
 
 .post-content .contents {
-flex: 1 1 60%;
-  
+  flex: 1 1 60%;
+
 }
 
 
@@ -622,15 +619,19 @@ flex: 1 1 60%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10rem 5rem;
+  padding: 10rem 2rem;
+}
+
+.error-message h2 {
+  font-size: clamp(1.953rem, 1.5867rem + 1.8317vw, 3.052rem);
 }
 
 .error-message p {
-  font-size: 1.953rem;
+  font-size: clamp(1.25rem, 1.0157rem + 1.1717vw, 1.953rem);
 }
 
 .error-message img {
-  width: 25%;
+  width: 30%;
   margin-bottom: 2rem;
 }
 

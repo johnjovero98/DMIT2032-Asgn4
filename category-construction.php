@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 <div class="container">
     <h2 class="archive-title">Posts about Construction</h2>
-
     <?php if (have_posts()) : ?>
         <div class="archive-posts">
             <?php while (have_posts()) : ?>
@@ -15,16 +14,11 @@
                     <?php the_excerpt(); ?>
                     <a class="read-more-link" href="<?php the_permalink(); ?>">Read More</a>
                 </div>
-
             <?php endwhile; ?>
         </div>
-        <?php the_posts_pagination();
-        ?>
-
+        <?php the_posts_pagination();?>
     <?php else : ?>
         <p>No Blog Posts found</p>
     <?php endif; ?>
-
 </div>
-
 <?php get_footer(); ?>

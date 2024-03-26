@@ -1,12 +1,10 @@
 <?php get_header(); ?>
-
 <div class="container">
     <div class="archive-title">
         <h2>Anchovies!</h2>
         <h4>sorry, I mean...</h4>
         <h2>Archives!</h2>
     </div>
-
     <?php if (have_posts()) : ?>
         <div class="archive-posts">
             <?php while (have_posts()) : ?>
@@ -23,15 +21,9 @@
 
             <?php endwhile; ?>
         </div>
-        <?php the_posts_pagination();
-        ?>
-
+        <?php the_posts_pagination(); ?>
     <?php else : ?>
         <p>No Blog Posts found</p>
     <?php endif; ?>
-
 </div>
-
-
-
 <?php get_footer(); ?>

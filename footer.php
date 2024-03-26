@@ -9,9 +9,6 @@
             <?php dynamic_sidebar('footer-column-2'); ?>
         </div>
     </div>
-
 </footer>
-
 </body>
-
 </html>

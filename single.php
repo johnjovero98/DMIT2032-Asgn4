@@ -1,6 +1,4 @@
 <?php get_header(); ?>
-
-
 <div class="post-banner">
     <div>
         <h1><?php the_title(); ?></h1>
@@ -48,5 +46,4 @@
         <!-- /wp:buttons -->
     </div>
 </div>
-
 <?php get_footer(); ?>
