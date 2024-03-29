@@ -11,8 +11,6 @@
                         <a href="<?php the_permalink(); ?>"><img src="<?php echo $featured_image[0]; ?>" alt='' class="img-fluid" /></a>
                     <?php endif; ?>
                     <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                    <?php the_excerpt(); ?>
-                    <a class="read-more-link" href="<?php the_permalink(); ?>">Read More</a>
                 </div>
             <?php endwhile; ?>
         </div>

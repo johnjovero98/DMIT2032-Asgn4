@@ -204,6 +204,9 @@ header div .logo {
 }
 
 
+header div.menu {
+  display: none;
+}
 
 header .menu {
   list-style: none;

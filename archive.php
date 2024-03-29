@@ -14,11 +14,8 @@
                         $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'medium'); ?>
                         <a href="<?php the_permalink(); ?>"><img src="<?php echo $featured_image[0]; ?>" alt='' class="img-fluid" /></a>
                     <?php endif; ?>
-                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                    <?php the_excerpt(); ?>
-                    <a class="read-more-link" href="<?php the_permalink(); ?>">Read More</a>
+                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>  
                 </div>
-
             <?php endwhile; ?>
         </div>
         <?php the_posts_pagination(); ?>
