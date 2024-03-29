@@ -131,9 +131,15 @@ p {
   margin: unset;
 }
 
+.wp-block-buttons {
+  margin: 1rem 0;
+}
+
 body a {
   color: var(--primary-color);
 }
+
+
 
 body a:hover {
   color: var(--brand-light);
@@ -276,11 +282,6 @@ header div nav .sub-menu a:hover {
   text-decoration: underline;
 }
 
-header .contact-us {
-  padding: 0 1rem 1rem;
-  display: flex;
-  justify-content: center;
-}
 
 
 header .menu-item>a {
@@ -320,7 +321,7 @@ header .menu-item>a:hover svg {
   }
 
 
-  header div nav .menu {
+  header .menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
