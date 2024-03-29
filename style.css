@@ -1,5 +1,5 @@
 /*
-Theme Name: HML Theme (Version Classique)
+Theme Name: HML Theme test (Version Classique)
 Author: John Jovero
 Description: HML theme, a sleek and modern WordPress custom theme designed for HML construction. With its clean and intuitive design, this theme is perfect for their businesses and marketing creatives looking to make a statement. Packed with customizable features and a responsive layout, this theme ensures your website looks stunning on any device.
 Version: 1.0.0
@@ -145,7 +145,7 @@ body h2 {
 }
 
 body h3 {
-  font-size: 2.441rem;
+  font-size: 1.563rem;
 }
 
 nav a {
@@ -181,6 +181,10 @@ img {
   max-width: 100%;
 }
 
+p {
+  margin: 1rem 0;
+}
+
 header>div {
   display: flex;
   justify-content: space-between;
@@ -195,21 +199,21 @@ header div .logo {
 
 
 
-header #menu-main-menu {
+header .menu {
   list-style: none;
   margin: unset;
   padding: 1rem;
 }
 
-header #menu-main-menu>li {
+header .menu>li {
   margin: .5rem 0;
 }
 
-header #menu-main-menu>li>a {
+header .menu>li>a {
   padding: .5rem;
 }
 
-header #menu-main-menu>li>a:hover {
+header .menu>li>a:hover {
   background-color: var(--white);
   border-radius: 10px;
 }
@@ -255,7 +259,7 @@ header div nav .sub-menu {
   display: none;
 }
 
-header #menu-main-menu>li:hover .sub-menu {
+header .menu>li:hover .sub-menu {
   display: block;
   list-style: none;
   background-color: var(--light-background);
@@ -329,18 +333,18 @@ header .menu-item>a:hover svg {
   }
 
 
-  header div nav #menu-main-menu {
+  header div nav .menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
   }
 
-  header div nav #menu-main-menu li {
+  header div nav .menu li {
     position: relative;
   }
 
-  header div nav #menu-main-menu li:hover .sub-menu {
+  header div nav .menu li:hover .sub-menu {
     display: block;
     background-color: var(--primary-color);
     position: absolute;
@@ -350,16 +354,16 @@ header .menu-item>a:hover svg {
     z-index: 3;
   }
 
-  header div nav #menu-main-menu li:hover .sub-menu li {
+  header div nav .menu li:hover .sub-menu li {
     background-color: unset;
     padding: unset
   }
 
-  header div nav #menu-main-menu li:hover .sub-menu li:not(:last-of-type) {
+  header div nav .menu li:hover .sub-menu li:not(:last-of-type) {
     margin-bottom: 1rem;
   }
 
-  header div nav #menu-main-menu li:hover .sub-menu a {
+  header div nav .menu li:hover .sub-menu a {
     color: var(--white);
   }
 
@@ -640,3 +644,82 @@ header .menu-item>a:hover svg {
   margin: 2rem 0;
   padding: 1rem;
 }
+
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+footer .hml-logo {
+  width: 200px;
+}
+
+footer h2 {
+  font-size: 2.441rem;
+}
+
+footer a {
+  display: block;
+}
+
+footer ul {
+  list-style: none;
+  padding: unset;
+  margin: unset;
+}
+
+footer .social-media-links ul {
+  display: flex;
+  gap:  1rem;
+}
+
+footer .social-media-logo {
+  height: 18px;
+}
+
+footer .footer-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 650px) {
+  footer .footer-navigation {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  
+}
+
+
+@media screen and (min-width: 960px) {
+  footer .container {
+    flex-direction: row;
+  }
+
+  footer .container > div:first-of-type {
+    flex: 1 1 30%;
+  }
+
+  footer .container > div:last-of-type {
+    flex: 1 1 70%;
+  }
+
+  footer .footer-navigation {
+
+    gap: 8rem;
+  }
+
+  
+}
+
+
+/* breakpoints 
+--medium: 650px;
+--large: 960px
+*/
+

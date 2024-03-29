@@ -136,17 +136,20 @@ add_action('after_setup_theme','hml_classic_jj_theme_setup');
 
 
 function hml_classic_jj_register_sidebars() {
+
+
     register_sidebar( array(
-        'name' => 'Social Media Links',
-        'id' => 'footer-column-1',
-        'description' => 'Widgets for social media links',
+        'name' => 'Services Links',
+        'id' => 'services-links-widgets',
+        'description' => 'Widgets for websites links',
         'before_widget' => '<div>',
         'after_widget' => '</div>'
+
     ));
 
     register_sidebar( array(
-        'name' => 'Website Links',
-        'id' => 'footer-column-2',
+        'name' => 'Explore Links',
+        'id' => 'explore-links-widgets',
         'description' => 'Widgets for websites links',
         'before_widget' => '<div>',
         'after_widget' => '</div>'
