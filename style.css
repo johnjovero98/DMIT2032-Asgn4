@@ -282,17 +282,6 @@ header .contact-us {
   justify-content: center;
 }
 
-header .contact-us .wp-block-button {
-  display: block;
-  width: 100%;
-}
-
-header .wp-block-button__link {
-  text-wrap: nowrap;
-  background-color: var(--light-background);
-  color: black;
-  display: block;
-}
 
 header .menu-item>a {
   display: flex;
@@ -324,9 +313,7 @@ header .menu-item>a:hover svg {
     color: var(--secondary-color);
   }
 
-  header .wp-block-button__link {
-    color: var(--white);
-  }
+
 
   header div nav .sub-menu {
     display: none;
@@ -375,11 +362,6 @@ header .menu-item>a:hover svg {
     padding: unset;
   }
 
-  header .wp-block-button__link {
-    text-wrap: nowrap;
-    background-color: var(--primary-color);
-
-  }
 
   header .menu-item>a svg {
     fill: var(--secondary-color);

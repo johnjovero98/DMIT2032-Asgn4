@@ -41,15 +41,6 @@
                     'theme_location'  => 'header',
                 ));
                 ?>
-
-                <!-- wp:buttons -->
-                <div class=" contact-us wp-block-buttons"><!-- wp:button -->
-                    <div class="wp-block-button">
-                        <a class="wp-block-button__link wp-element-button" href="https://jjovero1.dmitstudent.ca/dmit2032/classic-site/contact-us/">Get In Touch</a>
-                    </div>
-                    <!-- /wp:button -->
-                </div>
-                <!-- /wp:buttons -->
             </nav>
         </div>
     </header>
