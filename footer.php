@@ -4,6 +4,7 @@
         <div>
             <img class="hml-logo" src="<?php echo get_template_directory_uri() . '/assets/img/hml-logo.png' ?>" alt="HML logo">
             <p>We are a dedicated St. Albert and Edmonton landscaping design and construction team who value the beauty that great design and workmanship can bring to a space.</p>
+            <p>This page is a clone and was created for learning purposes only.</p>
             <div class="social-media-links">
                 <ul>
                     <li>
